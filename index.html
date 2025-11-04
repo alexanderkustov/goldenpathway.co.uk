@@ -35,31 +35,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic" crossorigin />
-
-    <script>
-      // --- Applying your custom branding guidelines ---
-      tailwind.config = {
-        theme: {
-          extend: {
-            colors: {
-              'bg-primary': 'var(--color-bg-primary)',
-              graphite: 'var(--color-bg-secondary)',
-              carbon: 'var(--color-bg-tertiary)',
-              'gold-base': 'var(--color-accent-primary)',
-              'gold-pale': 'var(--color-accent-pale)',
-              'gold-antique': 'var(--color-accent-secondary)',
-              'text-main': 'var(--color-text-main)',
-              'text-muted': 'var(--color-text-muted)',
-              'brand-teal': 'var(--color-bg-accent)',
-              'service-1': 'var(--color-service-1, #0F3E3E)',
-              'service-2': 'var(--color-service-2, #2B4F6A)',
-              'service-3': 'var(--color-service-3, #4A4E7A)',
-              'service-4': 'var(--color-service-4, #6A4D8A)',
-            },
-          },
-        },
-      };
-    </script>
+    <script src="tailwind.config.js"></script>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body class="bg-bg-primary font-sans text-text-main antialiased">
@@ -434,7 +410,7 @@
         <section id="contact" class="grid md:grid-cols-3 gap-8">
           <!-- CTA Card 1 -->
           <a
-            href="https://cal.com/example/15min"
+            href="https://calendly.com/zcheng1991/30min"
             target="_blank"
             rel="noopener noreferrer"
             class="block transition-transform duration-300 hover:scale-105"
@@ -457,7 +433,7 @@
           </a>
           <!-- CTA Card 2 -->
           <a
-            href="https://cal.com/example/30min"
+            href="https://calendly.com/zcheng1991/30min"
             target="_blank"
             rel="noopener noreferrer"
             class="block transition-transform duration-300 hover:scale-105"
@@ -515,21 +491,19 @@
           <nav
             class="flex flex-wrap justify-center gap-x-4 gap-y-2 text-xs text-text-muted"
           >
-            <a href="/terms" class="hover:text-gold-base"
+            <a href="/terms.html" class="hover:text-gold-base"
               >Terms of Business / Client Care</a
             >
             <span class="hidden md:inline text-carbon">|</span>
-            <a href="/complaints" class="hover:text-gold-base"
+            <a href="/complaints.html" class="hover:text-gold-base"
               >Complaints Procedure</a
             >
             <span class="hidden md:inline text-carbon">|</span>
-            <a href="/privacy" class="hover:text-gold-base">Privacy Policy</a>
-            <span class="hidden md:inline text-carbon">|</span>
-            <a href="/cookies" class="hover:text-gold-base"
-              >Cookies Notice & Preferences</a
+            <a href="/privacy.html" class="hover:text-gold-base"
+              >Privacy Policy</a
             >
             <span class="hidden md:inline text-carbon">|</span>
-            <a href="/accessibility" class="hover:text-gold-base"
+            <a href="/accessibility.html" class="hover:text-gold-base"
               >Accessibility Statement</a
             >
           </nav>
