@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-bg-primary: #0b0b0b;
+  --color-bg-secondary: #1c1c1c;
+  --color-bg-tertiary: #2a2a2a;
+  --color-bg-accent: #0f3e3e;
+  --color-text-main: #f5f3ee;
+  --color-text-muted: #8a8a8a;
+  --color-accent-primary: #c6a04e;
+  --color-accent-secondary: #9c7e3a;
+  --color-accent-pale: #d7b86d;
+  --color-service-1: #0f3e3e;
+  --color-service-2: #2b4f6a;
+  --color-service-3: #4a4e7a;
+  --color-service-4: #6a4d8a;
+}
+
+.light {
+  --color-bg-primary: #f5f3ee;
+  --color-bg-secondary: #ffffff;
+  --color-bg-tertiary: #e0e0e0;
+  --color-bg-accent: #d1e7e7;
+  --color-text-main: #0b0b0b;
+  --color-text-muted: #555555;
+  --color-accent-primary: #8c6d2f;
+  --color-accent-secondary: #755f2d;
+  --color-accent-pale: #c6a04e;
+  --color-service-1: #e7f2f2;
+  --color-service-2: #eaf0f5;
+  --color-service-3: #ebebf5;
+  --color-service-4: #f2ebf7;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.theme-toggle {
+  @apply cursor-pointer rounded-full border border-carbon bg-graphite px-3 py-1 text-sm font-medium text-text-main transition;
+}
+
+.theme-toggle:hover {
+  @apply border-gold-base text-gold-base;
+}
+
+.stylistic-tilde {
+  display: inline-block;
+  width: 1.5em;
+  height: 0.6em;
+  color: var(--color-accent-primary);
+  vertical-align: middle;
+  margin: 0 0.5em;
+}
+
+.stylistic-tilde svg {
+  width: 100%;
+  height: 100%;
+  stroke-linecap: round;
+}
