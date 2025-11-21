@@ -1,0 +1,68 @@
+---
+
+---
+
+<footer class="mt-16 border-t border-graphite pt-8">
+  <div class="px-4 text-center">
+    <p class="mb-4 text-xs text-text-muted">
+      &copy; 2025 Goldlink Overseas Limited | Registered in England & Wales (CRN
+      15939962) | IAA Reg. No. F202433003 | 30–34 Moorgate, London EC2R 6DA
+    </p>
+    <nav
+      class="flex flex-wrap justify-center gap-x-4 gap-y-2 text-xs text-text-muted"
+    >
+      <a href="/terms" class="hover:text-gold-base"
+        >Terms of Business / Client Care</a
+      >
+      <span class="hidden text-carbon md:inline">|</span>
+      <a href="/complaints" class="hover:text-gold-base">Complaints Procedure</a
+      >
+      <span class="hidden text-carbon md:inline">|</span>
+      <a href="/privacy" class="hover:text-gold-base">Privacy Policy</a>
+      <span class="hidden text-carbon md:inline">|</span>
+      <a href="/accessibility" class="hover:text-gold-base"
+        >Accessibility Statement</a
+      >
+    </nav>
+    <button
+      id="theme-toggle"
+      class="theme-toggle mt-6 inline-flex items-center justify-center rounded-full border border-text-muted px-6 py-2 text-xs font-medium uppercase tracking-wider transition-all duration-300 hover:border-gold-base hover:text-gold-base hover:bg-bg-tertiary/10"
+    >
+      <span class="text">Light Mode</span>
+    </button>
+    <script>
+      const themeToggle = document.getElementById("theme-toggle");
+      const html = document.documentElement;
+
+      // Function to update UI based on current theme
+      function updateToggleUI() {
+        if (!themeToggle) return;
+        const text = themeToggle.querySelector(".text");
+        const isLight = html.classList.contains("light");
+
+        if (isLight) {
+          if (text) text.textContent = "DARK MODE";
+        } else {
+          if (text) text.textContent = "LIGHT MODE";
+        }
+      }
+
+      // Initial UI update
+      updateToggleUI();
+
+      if (themeToggle) {
+        themeToggle.addEventListener("click", () => {
+          const isLight = html.classList.contains("light");
+          if (isLight) {
+            html.classList.remove("light");
+            localStorage.setItem("theme", "dark");
+          } else {
+            html.classList.add("light");
+            localStorage.setItem("theme", "light");
+          }
+          updateToggleUI();
+        });
+      }
+    </script>
+  </div>
+</footer>

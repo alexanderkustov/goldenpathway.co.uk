@@ -1,0 +1,79 @@
+---
+import { getImage } from "astro:assets";
+import bgImage from "../assets/bg.png";
+
+const optimizedBg = await getImage({ src: bgImage, format: "webp" });
+---
+
+<section id="contact" class="grid md:grid-cols-3 gap-8">
+  <!-- CTA Card 1 -->
+  <a
+    href="https://cal.com/goldenpathway/15min"
+    target="_blank"
+    rel="noopener noreferrer"
+    class="block transition-transform duration-300 hover:scale-105"
+  >
+    <div
+      class="bg-graphite rounded-xl shadow-lg p-8 flex flex-col justify-between aspect-square h-full"
+    >
+      <h4
+        class="text-xs font-semibold tracking-widest uppercase text-text-muted mb-2 font-mono"
+      >
+        15min
+      </h4>
+      <div>
+        <h3 class="text-lg font-bold text-text-main mb-1">15 Minute Chat</h3>
+        <p class="text-base text-text-muted">Free</p>
+      </div>
+    </div>
+  </a>
+  <!-- CTA Card 2 -->
+  <a
+    href="https://cal.com/goldenpathway/30min"
+    target="_blank"
+    rel="noopener noreferrer"
+    class="block transition-transform duration-300 hover:scale-105"
+  >
+    <div
+      class="bg-graphite rounded-xl shadow-lg p-8 flex flex-col justify-between aspect-square h-full"
+    >
+      <h4
+        class="text-xs font-semibold tracking-widest uppercase text-text-muted mb-2 font-mono"
+      >
+        30min
+      </h4>
+      <div>
+        <h3 class="text-lg font-bold text-text-main mb-1">30 Minute Chat</h3>
+        <p class="text-base text-text-muted">£100</p>
+      </div>
+    </div>
+  </a>
+  <!-- CTA Card 3 -->
+  <div
+    class="relative bg-graphite rounded-xl shadow-lg p-8 flex flex-col justify-between aspect-square h-full overflow-hidden"
+  >
+    <div
+      class="absolute inset-0 bg-cover bg-center opacity-20"
+      style={`background-image: url('${optimizedBg.src}')`}
+    >
+    </div>
+    <div class="relative z-10 flex flex-col justify-between h-full">
+      <h4
+        class="text-xs font-semibold tracking-widest uppercase text-text-muted mb-2 font-mono"
+      >
+        Address
+      </h4>
+      <div>
+        <h3 class="text-lg font-bold text-text-main mb-1">
+          30–34 Moorgate, <br />
+          London EC2R 6DA
+        </h3>
+        <p class="text-base text-text-muted">Hours: Mon-Fri 09:00–17:30</p>
+        <p class="text-xs mt-2">
+          <strong>Accessibility:</strong> Wheelchair-accessible office and video
+          consultations available.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>

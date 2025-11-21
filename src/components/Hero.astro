@@ -1,0 +1,23 @@
+---
+import { Image } from 'astro:assets';
+import logo from '../assets/logo.png';
+---
+
+<section class='grid md:grid-cols-2 gap-8 mb-16'>
+  <!-- Left Square: Text -->
+  <div
+    class='bg-graphite rounded-xl shadow-lg p-8 md:p-12 flex flex-col justify-between aspect-square'
+  >
+    <div class='flex-grow flex items-center justify-center'>
+      <p class='text-4xl font-light'>
+        Clear.<br />
+        Compliant.<br />
+        Multilingual Immigration Advice for Your UK Journey.
+      </p>
+    </div>
+  </div>
+  <!-- Right Square: Image -->
+  <div class='aspect-square'>
+    <Image src={logo} alt="logo." class='w-full h-full object-cover rounded-xl' />
+  </div>
+</section>

@@ -1,0 +1,74 @@
+---
+
+---
+
+<style>
+    .typewriter h1 {
+        overflow: hidden;
+        border-right: 0.15em solid var(--color-accent-primary);
+        white-space: nowrap;
+        margin: 0 auto;
+        letter-spacing: 0.15em;
+        animation:
+            typing 2.5s steps(14, end),
+            blink-caret 0.75s step-end infinite;
+        max-width: fit-content;
+    }
+
+    @keyframes typing {
+        from {
+            width: 0;
+        }
+        to {
+            width: 100%;
+        }
+    }
+
+    @keyframes blink-caret {
+        from,
+        to {
+            border-color: transparent;
+        }
+        50% {
+            border-color: var(--color-accent-primary);
+        }
+    }
+</style>
+
+<div
+    id="welcome-loader"
+    class="fixed inset-0 z-50 flex items-center justify-center bg-primary transition-opacity duration-1000"
+>
+    <div class="typewriter">
+        <h1
+            class="text-3xl font-bold tracking-widest text-text-main md:text-5xl"
+            id="loader-text"
+        >
+            Golden Pathway
+        </h1>
+    </div>
+</div>
+
+<script>
+    const loader = document.getElementById("welcome-loader");
+    const hasVisited = localStorage.getItem("hasVisited");
+
+    if (hasVisited) {
+        // If visited, hide immediately
+        if (loader) loader.style.display = "none";
+    } else {
+        // If first visit, show animation
+        if (loader) {
+            // Wait for typing (2.5s) + pause (1s) then fade out
+            setTimeout(() => {
+                loader.classList.add("opacity-0");
+
+                // Remove from DOM after fade out
+                setTimeout(() => {
+                    loader.style.display = "none";
+                    localStorage.setItem("hasVisited", "true");
+                }, 1000); // Match transition duration
+            }, 3500); // 2.5s typing + 1s pause
+        }
+    }
+</script>

@@ -1,0 +1,26 @@
+---
+const currentPath = Astro.url.pathname;
+const showNav = currentPath === "/";
+const navLinks = ["about", "services", "contact"];
+const navigationItems = [
+  { text: "About", link: "#about" },
+  { text: "Services", link: "#services" },
+  { text: "Contact", link: "#contact" },
+];
+---
+
+{
+  showNav ? (
+    <>
+      {navigationItems.map((item) => (
+        <li>
+          <a href={item.link}>{item.text}</a>
+        </li>
+      ))}
+    </>
+  ) : (
+    <li>
+      <a href="/">Home</a>
+    </li>
+  )
+}

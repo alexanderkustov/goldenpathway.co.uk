@@ -1,0 +1,127 @@
+@import "tailwindcss";
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* --- Base Theme (Dark) --- */
+:root {
+  color-scheme: dark;
+  /* Use only one set of variables for the dark theme, matching Tailwind config */
+
+  --color-bg-primary: #0b0b0b;
+  /* rich-black */
+  --color-bg-secondary: #1c1c1c;
+  /* graphite */
+  --color-bg-tertiary: #2a2a2a;
+  /* carbon */
+  --color-bg-accent: #0f3e3e;
+  /* brand-teal */
+  --color-text-main: #f5f3ee;
+  --color-text-muted: #8a8a8a;
+  --color-accent-primary: #c6a04e;
+  /* gold-base */
+  --color-accent-secondary: #9c7e3a;
+  /* gold-antique */
+  --color-accent-pale: #d7b86d;
+  /* gold-pale */
+  --color-service-1: #0f3e3e;
+  --color-service-2: #2b4f6a;
+  --color-service-3: #4a4e7a;
+  --color-service-4: #6a4d8a;
+  /* Service Card Accent Colors (legacy, optional) */
+  --color-accent-family: #1f5e5e;
+  --color-accent-work: #374a64;
+  --color-accent-sponsor: #5a4a2c;
+  --color-accent-citizenship: #2e5e4a;
+}
+
+.bg-primary {
+  background-color: var(--color-bg-primary);
+}
+
+.bg-graphite {
+  background-color: var(--color-bg-secondary);
+}
+
+.bg-service-1 {
+  background-color: var(--color-service-1);
+}
+
+.bg-service-2 {
+  background-color: var(--color-service-2);
+}
+
+.bg-service-3 {
+  background-color: var(--color-service-3);
+}
+
+.bg-service-4 {
+  background-color: var(--color-service-4);
+}
+
+.text-gold-base {
+  color: var(--color-accent-primary);
+}
+
+/* --- Light Theme --- */
+/* --- Light Theme --- */
+.light {
+  color-scheme: light;
+  --color-bg-primary: #f5f3ee;
+  /* Light background */
+  --color-bg-secondary: #ffffff;
+  /* Card background */
+  --color-bg-tertiary: #e0e0e0;
+  /* Contrasting card background */
+  --color-bg-accent: #d1e7e7;
+  /* Light teal */
+  --color-text-main: #0b0b0b;
+  /* Dark text */
+  --color-text-muted: #555555;
+  --color-accent-primary: #8c6d2f;
+  /* Darker gold/bronze for contrast */
+  --color-accent-secondary: #755f2d;
+  /* Even darker gold */
+  --color-accent-pale: #c6a04e;
+
+  /* Service Card Backgrounds (Light) */
+  --color-service-1: #e7f2f2;
+  /* Light Teal */
+  --color-service-2: #eaf0f5;
+  /* Light Slate Blue */
+  --color-service-3: #ebebf5;
+  /* Light Indigo */
+  --color-service-4: #f2ebf7;
+  /* Light Purple */
+}
+
+/* Style for the theme toggle button */
+.theme-toggle {
+  cursor: pointer;
+  background-color: var(--color-bg-secondary);
+  color: var(--color-text-main);
+  border: 1px solid var(--color-bg-tertiary);
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+}
+
+/* A stylish replacement for an em-dash, shaped like a tilde */
+.stylistic-tilde {
+  display: inline-block;
+  width: 1.5em;
+  height: 0.6em;
+  color: var(--color-accent-primary);
+  vertical-align: middle;
+  margin: 0 0.5em;
+}
+
+.stylistic-tilde svg {
+  width: 100%;
+  height: 100%;
+  stroke-linecap: round;
+}
+
+.leading-tight {
+  line-height: 1.25;
+}

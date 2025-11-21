@@ -1,0 +1,24 @@
+---
+import Base from "../layouts/Base.astro";
+---
+
+<Base title="Page Not Found | Golden Pathway">
+    <div
+        class="flex min-h-[60vh] flex-col items-center justify-center text-center"
+    >
+        <h1 class="mb-4 text-6xl font-bold text-gold-base">404</h1>
+        <h2 class="mb-6 text-3xl font-semibold text-text-main">
+            Page Not Found
+        </h2>
+        <p class="mb-8 max-w-md text-xl text-text-muted">
+            Sorry, we couldn't find the page you were looking for. It might have
+            been moved or deleted.
+        </p>
+        <a
+            href="/"
+            class="inline-block rounded-full bg-gold-base px-8 py-3 text-lg font-medium text-white transition-colors hover:bg-gold-dark"
+        >
+            Go Back Home
+        </a>
+    </div>
+</Base>
